@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" data-framework="javascript">
+	<head>
+		<meta charset="utf-8">
+		<title>js-todo-mvc</title>
+		<link rel="stylesheet" href="">
+	</head>
+	<body>
+		<section class="todoapp">
+			<header class="header">
+				<h1>todos</h1>
+				<input class="new-todo" placeholder="What needs to be done?" autofocus>
+			</header>
+			<section class="main">
+				<ul id="todo-list">
+					<!-- compiled todo list template inserted here -->	
+				</ul>
+				<!-- todo list handlebar template -->
+				<script id="todo-list-template" type="text/x-handlebars-template">
+				  {{#each this}}
+				  	<li data-id="{{id}}">{{text}}</li>
+				  {{/each}}
+				</script>	
+			</section>
+			<footer class="footer">
+				
+			</footer>
+		</section>
+		<footer class="info">
+
+		</footer>
+		
+		<!-- hbs -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>		
+
+		<!-- app related custom js -->
+		<script src="js/Model.js"></script>
+		<script src="js/View.js"></script>		
+		<script src="js/Controller.js"></script>
+
+		<!-- should be last -->
+		<script src="js/app.js"></script>	
+
+
+	</body>
+
+	
+</html>
